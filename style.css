@@ -288,3 +288,92 @@ a {
 @media only screen and (min-width:1200px) {}
 
 /* responsive pc*/
+
+.project-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  /*text-transform: uppercase;*/
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: darkred;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set background image for the body */
+body {
+  background-image: url('5757.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* projects section style */
+#projects {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  /* Text color for projects section */
+  padding: 100px 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+#projects .projects {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+
+/* projects section style */
+#projects {
+  background-color: rgba(40, 40, 40, 0.8);
+  color: #fff;
+  /* Text color for projects section */
+}
+
+#projects .projects {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.section-title {
+  color: #fff;
+  /* Set the color of "Our Works" to white */
+}
