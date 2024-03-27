@@ -345,10 +345,7 @@ body {
   color: #fff;
   /* Text color for projects section */
   padding: 100px 0;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+
 }
 
 #projects .projects {
@@ -371,6 +368,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+}
+
+.section-title {
+  color: #fff;
+  /* Set the color of "Our Works" to white */
 }
 
 .section-title {
