@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A* Pathfinding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>A* Pathfinding</h1>
+    <label for="heuristic">Select Heuristic:</label>
+    <select id="heuristic">
+      <option value="manhattan">Manhattan</option>
+      <option value="euclidean">Euclidean</option>
+    </select>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <button id="findPathButton">Find Path</button>
+    <button id="clearButton">Clear</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

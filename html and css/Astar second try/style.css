@@ -1,0 +1,55 @@
+.container {
+  text-align: center;
+  /* Center align all contents */
+}
+
+h1 {
+  margin-bottom: 20px;
+  /* Add space below the heading */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  display: block;
+  margin: 0 auto 20px;
+  /* Center the select element horizontally and add bottom margin */
+  width: 200px;
+  /* Set the width of the select element */
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #333;
+  background-color: #f0f0f0;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: translateY(1px);
+}
