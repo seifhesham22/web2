@@ -1,0 +1,185 @@
+{
+  "title": "Play Outside",
+  "content": "Season",
+  "type": "nary",
+  "labels": [
+    {"text": "Summer", "value": 0},
+    {"text": "Autumn/Spring", "value": 1},
+    {"text": "Winter", "value": 2}
+  ],
+  "children": [
+    {
+      "value": 0,
+      "title": "Summer",
+      "content": "Outlook",
+      "type": "nary",
+      "labels": [
+        {"value": 0, "text": "Sunny"},
+        {"value": 1, "text": "Overcast"},
+        {"value": 2, "text": "Rain"}
+      ],
+      "children": [
+        {
+          "value": 0,
+          "title": "Sunny Day",
+          "content": "Humidity",
+          "type": "nary",
+          "labels": [
+            {"value": 0, "text": "High"},
+            {"value": 1, "text": "Normal"}
+          ],
+          "children": [
+            {"value": 1, "title": "Dry", "content": "whoooo, I'm Excited Let's play"},
+            {
+              "value": 0,
+              "title": "Humid",
+              "content": "Dark clouds in the sky?",
+              "type": "binary",
+              "children": [
+                {"value": 1, "title": "Looks like rain", "content": "Let's play some other day"},
+                {"value": 0, "title": "Blue sky", "content": "Let's play"}
+              ]
+            }
+          ]
+        },
+        {"value": 1, "title": "I like Overcast weather", "content": "Let's play"},
+        {
+          "value": 2,
+          "title": "Outlook: Rain",
+          "content": "Rain Intensity",
+          "type": "nary",
+          "labels": [
+            {"value": 0, "text": "Drizzling"},
+            {"value": 1, "text": "Shower"},
+            {"value": 2, "text": "Pouring"}
+          ],
+          "children": [
+            {"value": 0, "title": "Little rain don't bother", "content": "Let's play"},
+            {
+              "value": 1,
+              "title": "Shower",
+              "content": "Do you have an umbrella?",
+              "type": "binary",
+              "children": [
+                {"value": 1, "title": "You will get wet you should buy one", "content": "so, Let's play some other day"},
+                {"value": 0, "title": "Finally you are going to use it ", "content": "Be careful and have fun"}
+              ]
+            },
+
+            {"value": 2, "title": "Pouring", "content": "Not today ;( Let's play some other day"}
+          ]
+        }
+      ]
+    },
+    {
+      "value": 1,
+      "title": "Autumn/Spring",
+      "content": "Outlook",
+      "type": "nary",
+      "labels": [
+        {"value": 0, "text": "Sunny"},
+        {"value": 1, "text": "Overcast"},
+        {"value": 2, "text": "Rain"}
+      ],
+      "children": [
+        {"value": 0, "title": "I love the sun", "content": "Let's play and enjoy the sun"},
+        {
+          "value": 1,
+          "title": "Overcast",
+          "content": "Fog",
+          "type": "nary",
+          "labels": [
+            {"value": 0, "text": "High"},
+            {"value": 1, "text": "Low"}
+          ],
+          "children": [
+            {"value": 0, "title": "High fog", "content": "Let's play some other day"},
+            {
+              "value": 1,
+              "title": "Low fog",
+              "content": "Wind",
+              "type": "nary",
+              "labels": [
+                {"value": 0, "text": "Strong"},
+                {"value": 1, "text": "Weak"}
+              ],
+              "children": [
+                {"value": 0, "title": "Strong wind", "content": "Let's play some other day"},
+                {"value": 1, "title": "Weak wind", "content": "Ураа!! Let's play"}
+              ]
+            }
+          ]
+        },
+        {
+          "value": 2,
+          "title": "Outlook: Rain",
+          "content": "Rain Intensity",
+          "type": "nary",
+          "labels": [
+            {"value": 0, "text": "Drizzling"},
+            {"value": 1, "text": "Shower"},
+            {"value": 2, "text": "Pouring"}
+          ],
+          "children": [
+            {"value": 0, "title": "Little rain don't bother", "content": "Let's play"},
+            {
+              "value": 1,
+              "title": "Shower",
+              "content": "Do you have an umbrella?",
+              "type": "binary",
+              "children": [
+                {"value": 1, "title": "You will get wet you should buy one", "content": "Let's play some other day"},
+                {"value": 0, "title": "Finally you are going to use it", "content": "Let's play"}
+              ]
+            },
+
+            {"value": 2, "title": "Pouring", "content": "Not today ;( Let's play some other day"}
+          ]
+        }
+      ]
+    },
+    {
+      "value": 2,
+      "title": "Winter",
+      "content": "Outlook",
+      "type": "nary",
+      "labels": [
+        {"value": 0, "text": "Sunny"},
+        {"value": 1, "text": "Overcast"},
+        {"value": 2, "text": "Snowy"}
+      ],
+      "children": [
+        {
+          "value": 0,
+          "title": "Outlook: Sunny",
+          "content": "Temperature < 0",
+          "type": "binary",
+          "children": [
+            {"value": 1, "title": "Is it Siberia ??", "content": "Let's play some other day"},
+            {
+              "value": 0,
+              "title": "Temperature is above 0 ",
+              "content": "Is the sidewalk slippery?",
+              "type": "binary",
+              "children": [
+                {"value": 1, "title": "caution slippery surface", "content": "Let's play some other day"},
+                {"value": 0, "title": "whoooo", "content": "Let's play"}
+              ]
+            }
+          ]
+        },
+        {
+          "value": 1,
+          "title": "Outlook: Overcast",
+          "content": "Temperature > 0",
+          "type": "binary",
+          "children": [
+            {"value": 1, "title": "Is it Siberia ??", "content": "Let's play some other day"},
+            {"value": 0, "title": "Normal weather", "content": "Let's play"}
+          ]
+        },
+        {"value": 2, "title": "I'm Freezing", "content": "Let's play some other day"}
+      ]
+    }
+  ]
+}
