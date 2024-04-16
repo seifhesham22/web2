@@ -1,3 +1,19 @@
+body {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -14,13 +30,13 @@ canvas {
 
 .canvas-picking-active {
   cursor: crosshair;
-  border: 1px solid #38f;
+  border: 3px solid black;
 }
 
 .controls {
   display: flex;
   width: 1024px;
-  border: 1px solid #333;
+  border: 3px solid black;
   margin-top: 10px;
 }
 
@@ -30,7 +46,7 @@ canvas {
 }
 
 .controls input {
-  border: 1px none #666;
+  border: 1px none green;
   border-bottom-style: solid;
   text-align: center;
 }
@@ -80,6 +96,6 @@ canvas {
   content: '';
   display: block;
   margin-top: 10px;
-  border-top: 1px solid #333;
+  border-top: 1px solid black;
   padding-top: 10px;
 }
