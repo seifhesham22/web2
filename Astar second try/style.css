@@ -1,11 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('joe-woods-4Zaq5xY5M_c-unsplash.jpg');
+  background-size: cover;
+  /* Ensures the background image covers the entire viewport */
+}
+
 .container {
   text-align: center;
-  /* Center align all contents */
+  position: relative;
+  /* Add relative positioning */
+  z-index: 1;
+  /* Ensure the container is above the background image */
 }
 
 h1 {
   margin-bottom: 20px;
-  /* Add space below the heading */
+}
+
+.label-container {
+  display: flex;
+  justify-content: center;
 }
 
 label {
@@ -16,9 +31,7 @@ label {
 select {
   display: block;
   margin: 0 auto 20px;
-  /* Center the select element horizontally and add bottom margin */
   width: 200px;
-  /* Set the width of the select element */
   padding: 8px;
   font-size: 16px;
   border: none;
@@ -30,8 +43,10 @@ select {
 canvas {
   display: block;
   margin: 0 auto;
-  border: 2px solid #333;
-  background-color: #f0f0f0;
+  border: 4px solid black;
+  background-color: #fff;
+  /* Set canvas background to white */
+  max-width: 100%;
 }
 
 button {
@@ -52,4 +67,36 @@ button:hover {
 
 button:active {
   transform: translateY(1px);
+}
+
+.instruction-box {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 200px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+.instruction-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .label-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .instruction-box {
+    position: static;
+    margin-top: 20px;
+  }
 }

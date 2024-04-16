@@ -16,10 +16,36 @@
       <option value="manhattan">Manhattan</option>
       <option value="euclidean">Euclidean</option>
     </select>
+    <label for="gridSize">Select Grid Size:</label>
+    <select id="gridSize">
+      <option value="10">10x10</option>
+      <option value="20" selected>20x20</option>
+      <option value="30">30x30</option>
+      <option value="40">40x40</option>
+      <option value="50">50x50</option>
+    </select>
     <canvas id="canvas" width="400" height="400"></canvas>
     <button id="findPathButton">Find Path</button>
     <button id="clearButton">Clear</button>
   </div>
+  <div class="label-container">
+    <div class="instruction-box">
+      <p>
+        <strong>Instructions:</strong>
+        <br>
+        1. Choose the beginning and ending points on the grid by clicking on any two cells.
+        <br>
+        2. Create walls by clicking and dragging your mouse over the cells where you want to place them.
+        <br>
+        3. After selecting the start, end, and walls, click the "Find Path" button to visualize the pathfinding
+        algorithm.
+        <br>
+        4. Use the "Clear" button to reset the grid and start over.
+      </p>
+    </div>
+  </div>
+
+
 
   <script src="script.js"></script>
 </body>

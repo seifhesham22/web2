@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const gridSize = 20;
-const canvasSize = 400; // Equal to the width and height of the canvas
-const cellSize = canvasSize / gridSize;
+let gridSize = 20; // Default grid size
+let canvasSize = 600; // Updated canvas size
+let cellSize = canvasSize / gridSize;
 
 canvas.width = canvasSize;
 canvas.height = canvasSize;
@@ -12,9 +12,10 @@ let end = null;
 let walls = new Set();
 let isDragging = false;
 let lastClickedCell = null;
+
 function drawGrid() {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-  ctx.strokeStyle = '#000'; // Set stroke color to black
+  ctx.strokeStyle = 'black'; // Set stroke color to black
   ctx.lineWidth = 1; // Set line width to 1 pixel
 
   // Draw vertical grid lines
@@ -104,6 +105,16 @@ function clearCanvas() {
   end = null;
 }
 
+const gridSizeSelect = document.getElementById('gridSize');
+gridSizeSelect.addEventListener('change', function () {
+  gridSize = parseInt(this.value);
+  canvasSize = 600; // Updated default canvas size
+  cellSize = canvasSize / gridSize;
+  canvas.width = canvasSize;
+  canvas.height = canvasSize;
+  clearCanvas();
+});
+
 function heuristic(node, goal) {
   const heuristicType = document.getElementById('heuristic').value;
   if (heuristicType === 'euclidean') {
@@ -182,7 +193,6 @@ function aStar(start, end) {
 }
 
 function drawPath(path) {
-  ctx.strokeStyle = 'yellow';
   ctx.lineWidth = cellSize / 2;
   ctx.lineCap = 'round';
   ctx.beginPath();
@@ -215,12 +225,22 @@ function findAndDrawPath() {
 
   const path = aStar(start, end);
   if (path) {
-    drawPath(path);
+    // Introducing delay
+    let i = 0;
+    const interval = setInterval(() => {
+      drawPath(path.slice(0, i + 1));
+      i++;
+      if (i >= path.length) {
+        clearInterval(interval);
+      }
+    }, 30); // Adjust delay here (in milliseconds)
   } else {
     alert('No path found!');
   }
 }
 
-
 document.getElementById('findPathButton').addEventListener('click', findAndDrawPath);
 document.getElementById('clearButton').addEventListener('click', clearCanvas);
+
+
+
