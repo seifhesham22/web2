@@ -1,11 +1,11 @@
 h1 {
-  margin: 20px;
+  margin: 50px;
 }
 
 canvas {
   border: 1px solid black;
   margin-bottom: 20px;
-  background-color: #f8ffde;
+  background-color: #fff;
 }
 
 button {
@@ -37,11 +37,11 @@ button:active {
 
 header {
   height: 100px;
-  background-color: #247ABF;
+  background-color: #B8860B;
 }
 
 body {
-  background-color: #008080;
+  background-color: #B8860B;
   background-image: url(../main/images/background_tree.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +97,7 @@ input {
   appearance: none;
   border: 0;
   border-radius: 10px;
-  background: #247ABF;
+  background: #ccc;
   color: #f8ffde;
   margin: 20px auto 20px auto;
   text-align: center;
@@ -118,7 +118,7 @@ input {
 
 #answer:focus, #answer:hover {
   outline: none;
-  background-color: #247ABF;
+  background-color:red;
 }
 
 .canvas {
@@ -161,7 +161,7 @@ input {
   appearance: none;
   border: 0;
   border-radius: 10px;
-  background: #247ABF;
+  background:red;
   color: #fff;
   font-size: 16px;
   padding: 7px 0 23px 0;
@@ -173,7 +173,7 @@ input {
 }
 
 .label:hover {
-  background: #7AB0DC;
+  background: red;
 }
 
 .tree ul {
@@ -249,10 +249,10 @@ input {
 }
 
 .tree li a:hover {
-  background: #247ABF;
+  background:red;
   color: #fff;
 }
 
 .tree li a:visited {
-  color: #247ABF;
+  color:rebeccapurple;
 }
