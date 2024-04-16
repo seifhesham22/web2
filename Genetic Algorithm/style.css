@@ -1,103 +1,37 @@
-body {
-    background-color: #808080;
-    /* Gray background */
-    font-family: Arial, sans-serif;
-    /* Default font */
-    margin: 0;
-    padding: 0;
+canvas {
+    border: 5px solid red;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.header {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.main-title {
-    color: #ff9900;
-    /* Suitable color for Genetic Algorithm */
-}
-
-.header-content {
-    display: flex;
-    align-items: flex-start;
-    /* Align items to the top */
-}
-
-.left-header {
-    flex: 1;
-    text-align: center;
-    margin-right: 20px;
-    /* Adjust margin as needed */
-}
-
-.right-header {
-    flex: 1;
-    /*text-align: right;*/
-    margin-top: 200px;
-}
-
-#tspCanvas {
-    background-color: #1496b5cf;
-    /* Special background color for the box */
-    border: 2px solid #333;
-    /* Border */
-    outline: 2px solid #ccc;
-    /* Outline */
-    width: 128%;
-    /* Make canvas fill its  100% */
-    height: 600px;
-    /* Increase height */
-    margin-top: 36px;
-    /* Move down */
-}
-
-.number-of-cities {
-    margin-bottom: 20px;
-}
-
-.number-of-cities label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-input[type="number"] {
-    width: 100px;
-    /* Increased width */
-    padding: 10px;
-    /* Increased padding */
-    margin-bottom: 10px;
-    /* Adjust margin as needed */
-}
-
-button {
+div {
+    margin: 20px;
     padding: 10px 20px;
-    background-color: #ff9900;
-    /* Button color */
-    color: #fff;
-    /* Text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
+    border: 5px solid grey;
 }
 
-button:hover {
-    background-color: #e68a00;
-    /* Darker color on hover */
+body {
+    background-color: #f0f0f0;
+    /* Light gray background */
+}
+
+.div1 {
+    background-color: #736c6c;
+    ;
+    /* White background for the main div */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+h1 {
+    color: orange;
+    /* Orange color for the h1 heading */
+}
+
+canvas {
+    border: 5px solid rgba(255, 0, 0, 0.582);
+    background-color: white;
+    /* White background for the canvas */
 }
 
 /* @keyframes 
